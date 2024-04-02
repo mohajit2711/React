@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap");
+
+//spacing
+$navheight: 60px;
+
+//color vars
+$primary: #232323;
+$secondary: rgba(#b3aa9e, 0.2);
+$blue: hsla(210, 92%, 57%, 1);
+$muted: #4d4f51;
+$light: #fefefe;
+$transparent: transparent;
+
+body,
+html {
+  font-family: "Rubik", sans-serif;
+  color: $primary;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+.Logo-terms {
+  height: 5%;
+  width: 5%;
+}
+
+.terms-header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: unset;
+  margin-top: 1.5%;
+}
+
+.Checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+.terms-container {
+  display: grid;
+  width: 75%;
+  gap: 0.5em;
+  margin: auto;
+  margin-bottom: 1rem;
+  box-shadow: 1px 4px 5px rgba($primary, 0.1);
+  // position: relative;
+
+  .terms {
+    height: 400px;
+    overflow: auto;
+  }
+
+  .btn-container {
+    background: #fff;
+    box-shadow: 0px -2px 5px rgba($primary, 0.1);
+    position: relative;
+    padding: 1rem 1.5rem;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    //   position: fixed;
+    //   right: 0rem;
+    //   top: 0rem;
+
+    .btn-accept {
+      all: unset;
+      width: 60%;
+      display: inline-block;
+      text-align: center;
+      background-color: $secondary;
+      padding: 1rem 1.5rem;
+      transition: all 250ms ease-in-out;
+      opacity: 0.6;
+
+      &.enabled {
+        cursor: pointer;
+        opacity: 1;
+        background-color: $primary;
+        color: $light;
+
+        &:focus {
+          outline: 3px solid $blue;
+        }
+      }
+    }
+    .btn-message {
+      position: absolute;
+      background-color: $primary;
+      color: $light;
+      padding: 1rem 1.5rem;
+      top: -45px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 250ms ease-in-out;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        transform: translateX(-50%);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid $primary;
+      }
+
+      &.visible {
+        top: -65px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .terms-container {
+    width: 90%;
+    .terms {
+      height: 700px;
+      overflow: auto;
+    }
+  }
+  .terms-header {
+    text-align: center;
+    font-size: 2rem;
+    margin: unset;
+  }
+  .Logo-terms {
+    padding-bottom: 2px;
+    height: 10%;
+    width: 10%;
+  }
+}

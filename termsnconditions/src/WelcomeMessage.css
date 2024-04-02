@@ -1,0 +1,31 @@
+.welcome-message {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.welcome-message h2 {
+    color: #333;
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+}
+
+.welcome-message p {
+    color: #666;
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .welcome-message {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .welcome-message h2 {
+        font-size: 1.2rem; /* Reduced font size for smaller screens */
+    }
+
+    .welcome-message p {
+        font-size: 0.9rem; /* Reduced font size for smaller screens */
+    }
+}

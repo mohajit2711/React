@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
+
+/* Global styles */
+body, html {
+  font-family: 'Rubik', sans-serif;
+  color: #232323; /* Use a specific color value instead of a variable */
+}
+
+.container {
+  width: 30%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 10%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: calc(100% - 12px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.submit-button {
+  background-color: purple;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: darkpurple;
+}
+
+.admin-header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: unset;
+  padding-top: 5%;
+}
+
+.Logo {
+  height: 18%;
+  width: 18%;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+/* Media query for screens up to 480px width */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-top: 20%; /* Adjust margin for vertical centering */
+  }
+
+  .form-group input,
+  button,
+  .submit-button {
+    width: 100%; /* Make input fields and buttons full width */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Decrease font size for smaller screens */
+  }
+
+  .terms-header {
+    font-size: 2rem; /* Decrease font size for smaller screens */
+  }
+}
